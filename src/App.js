@@ -1,9 +1,14 @@
 
 import React from "react";
-import ProductList from "./ProductList";
+import { TemperatureProvider } from "./TemperatureContext";
+import WeatherApp from "./WeatherApp";
 
 function App() {
-  return <ProductList />;
+  return (
+    <TemperatureProvider>
+      <WeatherApp />
+    </TemperatureProvider>
+  );
 }
 
 export default App;
